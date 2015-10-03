@@ -1,0 +1,21 @@
+/*
+.quoteArea{
+    border: 1px solid #000;
+}
+
+.quoteTextArea{
+    width: 100%;
+}*/
+body{
+    background: #456433;
+}
+
+blockquote{
+    background: #fff;
+}
+
+.MQBL{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}

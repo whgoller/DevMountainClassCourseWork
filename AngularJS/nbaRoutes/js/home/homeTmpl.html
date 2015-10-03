@@ -1,0 +1,50 @@
+<div class="inner-container">
+  <div class="team-container">
+    <div class="logo">
+      <img ng-src="{{logoPath1}}">    
+    </div>
+    <div class="record">
+     
+        <h1>{{jazzData.homeTeam}}</h1>
+        <h1> Wins: {{jazzData.wins}} Losses: {{jazzData.loses}} </h1>
+    </div>
+    <div class="team-data">
+      <div class="game" ng-repeat="game in jazzData" ng-class="{'even' : $index % 2 === 0}">
+        Date: {{game.createdAt | date : longDate}} <br />
+        {{homeTeam}} - {{game.homeTeamScore}}<br />
+        {{game.opponent}} - {{game.opponentScore}} <br />
+      </div>
+    </div>
+  </div>  
+  <div class="team-container">
+    <div class="logo">
+      <img ng-src="{{logoPath2}}">    
+    </div>
+    <div class="record">
+        <h1>{{lakersData.homeTeam}}</h1>
+        <h1> Wins: {{lakersData.wins}} Losses: {{lakersData.loses}} </h1>
+    </div>
+    <div class="team-data">
+      <div class="game" ng-repeat="game in lakersData" ng-class="{'even' : $index % 2 === 0}">
+        Date: {{game.createdAt | date : longDate}} <br />
+        {{homeTeam}} - {{game.homeTeamScore}}<br />
+        {{game.opponent}} - {{game.opponentScore}} <br />
+      </div>
+    </div>
+  </div>  <div class="team-container">
+    <div class="logo">
+      <img ng-src="{{logoPath3}}">    
+    </div>
+    <div class="record">
+        <h1>{{heatData.homeTeam}}</h1>
+        <h1> Wins: {{heatData.wins}} Losses: {{heatData.loses}} </h1>
+    </div>
+    <div class="team-data">
+      <div class="game" ng-repeat="game in heatData" ng-class="{'even' : $index % 2 === 0}">
+        Date: {{game.createdAt | date : longDate}} <br />
+        {{homeTeam}} - {{game.homeTeamScore}}<br />
+        {{game.opponent}} - {{game.opponentScore}} <br />
+      </div>
+    </div>
+  </div>
+</div>

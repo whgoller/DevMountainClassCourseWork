@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="quoteBook">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="MainController">
+    <div class="container">
+        <div class="center-block MQBL">
+            <h1>My Quote Book</h1>
+        </div>
+        <div ng-repeat="quote in quotes | filter : filterText">
+            <blockquote class="blockquote-reverse">
+                <p>{{quote.text}}</p>
+                <footer>-{{quote.author}}</footer>
+                <div ng-show="showDeleteButton">
+                    <button class="btn btn-default" ng-click="removeQuote(quote)">Remove</button>
+                </div>
+            </blockquote>
+        </div>
+        <div>
+            <button class="btn btn-default" ng-click="addNewQuote()">Add Quote</button>
+            <button class="btn btn-default" ng-click="showRemoveButton()">Remove Quote</button>
+            <button class="btn btn-default" ng-click="showFilterForm()">Filter Quotes</button>
+        </div>
+        <form ng-show="showForm" ng-submit="addQuote()" class="form-group">
+            <textarea type="text" placeholder="Enter Quote" class="form-control" ng-model="copy"></textarea>
+            <input type="text" placeholder="Enter Author" ng-model="authorName"/>
+            <button class="btn btn-default">Submit</button>
+        </form>
+        <div ng-show="showFilter" >
+            <input type="text" placeholder="Enter Quote" class="form-control" ng-model="filterText" ></textarea>
+        </div>
+    </div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular.min.js"></script>   
+<script src="JS/app.js"></script>
+<script src="JS/controller.js"></script>
+<script src="JS/dataService.js"></script>
+</body>
+</html>

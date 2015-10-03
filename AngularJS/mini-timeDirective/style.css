@@ -1,0 +1,16 @@
+.navbar {
+  border-radius: 0px;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+}
+
+.circle {
+  border-radius: 50px;
+}
+
+.glyphicon {
+  margin-top: 6px;
+}

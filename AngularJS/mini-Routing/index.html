@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="routingApp">
+  <head>
+    <title>miniRouting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="#/"> Home </a></li>
+        <li>
+          Products
+          <ul>
+            <li><a href="#/products/shoes">Shoes</a></li>
+            <li><a href="#/products/socks">Socks</a></li>
+          </ul>
+        </li>
+        <li><a href="#/settings"> Settings </a></li>
+      </ul>
+    </div>
+    <div class="view-container">
+      test
+      <ng-view></ng-view>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home/homeCtrl.js"></script>
+    <script src="js/products/productsCtrl.js"></script>
+    <script src="js/products/productsService.js"></script>
+    <script src="js/settings/settingsCtrl.js"></script>
+  </body>
+</html>

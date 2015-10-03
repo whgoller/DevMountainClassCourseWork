@@ -1,0 +1,52 @@
+AngularJs "HTML enhanced for web apps"
+What is angular?
+	Web app famework Template
+
+Data Binding - also known as two way data binding
+  No more .val()
+  View and JS are always synced
+  Reacts to changes
+
+Directives - Build your own html elements! use angular html elements
+
+Templateing - Built in templating language like handlbars
+			- allows data to be represented in the html
+			- build baby html files!
+            
+Routing - Route baby html files
+        - handle the states of your views!
+
+ng- will call an angular built in directive...
+
+The service is what stands between the database and the app.
+view - controller - service and service - controller - view
+controller reloads when the page reloads the service does not.
+
+
+/service could also be factory, provider or service... the syntax is a little bit different for each
+
+
+
+Ryan Shaw  works at instructure....
+dependency injection is basically importing external code to be used in the current code..
+makes it so you don't have to use
+var specialModule = require('specialModule)
+var other = require('other')
+
+
+this code is also doing the above.
+var app = angular.module('jsbin', []);
+app.controller('DemoCtrl', function(specialModule, other, $http, $q){
+    $q
+    $http
+    this.name = 'World';
+})
+
+
+
+ 
+
+
+
+
+

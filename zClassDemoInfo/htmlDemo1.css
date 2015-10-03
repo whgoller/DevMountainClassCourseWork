@@ -1,0 +1,35 @@
+/* don't use html elements if possible  and try not to use ids for styling use the ids for hooks. 
+To style use classes */
+/*div {
+	background: blue;
+}
+
+#box {
+	width: 100px;
+	height: 100px;
+	background: black;
+}*/
+
+/** pixel are static */
+/* use px for the body tag */
+/** use ems (ems will compound) and rems(root size) for typography */
+/** percentages are static */
+/* use rems and ems for responsive sites */
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.green {
+	background: green !important;
+}
+
+.blue {
+	background: blue;
+}
+
+/** use !important for debugging only, not to */

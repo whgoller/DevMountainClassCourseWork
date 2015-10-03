@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Mini Project</title>
+  </head>
+  <body>
+    <div ng-app="pickleApp">
+      <div ng-controller="pickleController">
+        <form name="authForm">
+          <input type="text"  ng-model="email" placeholder="Email" required>
+          <input type="password"  ng-model="password" placeholder="Password" required>
+          <button ng-click="logIn(email, password)"  ng-disabled="">Log IN </button>
+          <button ng-click="register(email, password)" ng-disabled="">Register</button>
+        </form>
+<!--
+        <hr>
+        <form name="userForm">
+          <input type="text"  ng-model="user.username" placeholder="Username" required>
+          <select ng-model="user.type">
+            <option value="">Chose a type!</option>
+            <option value="mild">Mild</option>
+            <option value="spicy">Spicy</option>
+          </select>
+          <input type="number"  ng-model="user.favoriteNumer" placeholder="Enter Number" required>
+        </form>
+-->
+        <hr>
+        <form name="newChatForm">
+          <input type="text"  ng-model="text" placeholder="text" required>
+          <button ng-click="addChat(user.username, text)" ng-disabled="newChatForm.$invalid || !user.username">Submit</button>
+        </form>
+
+
+        <ul>
+          <li ng-repeat="message in messages">
+            <button ng-click="deleteMessage(message)">Remove</button>
+            {{message.username}}: {{message.text}}: ({{message.created}})
+          </li>
+        </ul>
+        
+          <button ng-click="logUser()">Submit</button>
+      </div>
+    </div>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <!-- moment.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    
+    <script type="text/javascript">
+      (function(){
+        var app = angular.module('pickleApp', ['firebase']);
+        
+        app.controller('pickleController', function($scope, $window, $firebaseArray, $firebaseObject, $firebaseAuth){
+          var messages = $firebaseArray(new Firebase("https://wgrtfm.firebaseio.com/pickleApp/messages")),
+              users = $firebaseArray(new Firebase("https://wgrtfm.firebaseio.com/pickleApp/user")),
+              authObject = $firebaseObject(new Firebase("https://wgrtfm.firebaseio.com/pickleApp")),
+              moment = $window.moment;
+          
+          $scope.messages = messages;
+        
+          
+          $scope.logUser = function(){
+            console.log(user);
+          }
+          
+          $scope.addChat = function(username, text){
+            $scope.messages.$add({
+              username: username,
+              text: text,
+              created: moment().format(),
+              $priority: moment().unix()
+            });
+          };
+          
+          $scope.deleteMessage = function(message){
+            $scope.messages.$remove(message);
+          }
+          
+          $scope.logIn = function(email, password){
+            authObject.$authWithPassword({
+              email: email,
+              password: "mypassword"
+            }).then(function(authData) {
+                console.log("Logged in as:", authData.uid);
+              }).catch(function(error) {
+                  console.error("Authentication failed:", error);
+              });
+          };
+          
+          
+          $scope.register = function(email, password){
+            authObject.$createUser({
+              email: email,
+              password: password
+            }).then(function(authData) {
+              return authObject.$authWithPassword({
+                email: email,
+                password: password
+              });
+            }).then(function(authData) {
+              var userEmail = authData.password.email,
+                  uid = authData.uid,
+                  user = $firebaseObject(new Firebase("https://wgrtfm.firebaseio.com/pickleApp/user" + uid));
+              
+              user.email = userEmail,
+              user.uid = authData.uid,
+              user.created = moment().format();
+              user.$save().then(function(success){
+                console.log("success",success);
+              }, function(error){                
+                console.log("error",error);
+              });
+              
+              console.log("authData", authData);
+              console.log("Logged in as:", authData.uid);
+            }).catch(function(error) {
+                  console.error("Authentication failed:", error);
+            });
+          };
+          
+          
+        });
+        
+      })();
+    
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+*{
+    ourline: 3px solid orange;
+    /* use for seeing where everything is.*/
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    /*background-color: #000;*/
+    /*background-image: url(http://images.apple.com/v/home/bl/images/new_year_xlarge.png);*/
+    background: red;
+    color: red;
+    padding: 50px;
+    border: 30px solid #000;
+    box-sizing: border-box;
+    float: right;
+}
+
+.floor2 {
+    /* properties for clear are: right, left, none or both */
+    clear: both;
+}

@@ -1,0 +1,3 @@
+1. Make a directive that will display your name when placed into the html.
+
+2. use the isolate scope and create a directive that will create an input box and button that you can enter a name into the input box and click the button and it will alert "name is done".

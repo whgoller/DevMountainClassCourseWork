@@ -1,0 +1,1 @@
+$q is a promise library. $http is a subset of $q but also has ajax functionality.

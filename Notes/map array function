@@ -1,0 +1,10 @@
+//Map is an array function
+
+[1,2,3].map(funciton(value){
+    return "mapped to " + value;
+})
+
+
+Map reduce.
+
+

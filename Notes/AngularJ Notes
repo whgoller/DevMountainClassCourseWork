@@ -1,0 +1,38 @@
+Angular Features
+
+SPA (single page application)
+AngularJS is a full-featured APA frmework
+	Data Binding
+	MVC
+	Routing
+	Testing
+	jqLite
+	Templates
+	History
+	Factories
+	viewodels 
+	Contollers 
+	views 
+	Directives 
+	services
+	dependency injenction
+	validation
+
+
+
+Getting Started
+angularjs.org
+
+in html page add the angularjs script to the page.
+
+
+
+Directives Filters and Data Binding
+What are Directives? - way to teach HTML new tricks!
+
+
+
+Views, Controllers and Scope
+
+Modules, Routes and Factories
+

@@ -1,0 +1,55 @@
+Transclusion notes:
+** look up more on transclustion
+
+
+AJAX
+
+Application Programming Interface
+API vs REST API
+
+
+
+
+REST Api
+
+CRUD:
+GET
+PUT
+POST
+DELETE
+
+PUT vs POST - POST hits a generic endpoint to call a method or create data.
+mysite.com/newuser /If we don't know the specifiec url then we use POST and let the server handle it.
+PUT hits a more specific endpoint. mysite.com/users/132537 / It uses a specific URL
+
+Documentation
+
+cURL
+curl www.google.com //this is an example and would be typed in the terminal.
+
+
+
+
+show how I integrate with parse.com
+
+node **
+express**
+
+
+
+
+URI
+
+
+Here are the API keys for today's repo:
+
+Client ID
+3257a93c96b37cf80ae9
+Client Secret
+45becb1dda65f5af435cb81048b8791bd02440f9
+
+
+
+
+
+

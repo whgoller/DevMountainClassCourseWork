@@ -1,0 +1,7 @@
+Notes on $http and $q
+
+$http
+$http is an angular service that makes ajax requests.
+
+
+$q

@@ -1,0 +1,18 @@
+    "pickleApp":{
+      "messages": {
+        ".read": true,
+        ".write": true
+      },
+      
+      "users": {
+        
+        "$userUid":{
+          ".read": "auth.uid == $userUid",
+          ".write": "auth.uid == $userUid"
+        }
+
+        
+      }
+    }
+    
+    

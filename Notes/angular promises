@@ -1,0 +1,61 @@
+angular promises
+
+promise object
+the promise object has a method called then.
+
+
+example:
+
+
+
+
+var makeAjaxRequest = function(url, callback){
+
+};
+
+
+var app = angular.module('jsbin', [])
+
+app.controller('DemoCtrl', function(specialModule, other, $http, $q){
+
+//the following will not work:
+users = $http('/url/to/our/users.json')
+
+//so we do this instead:
+$http('/url/to/our/users.json').then(function(users){
+    $scope.users = users;
+})
+
+$q.all($http('/url/to/our/users.json'), $http('/url/to/messages'), $http('/url/to/comments').then(function(users, messages, comments)){
+
+});
+
+
+var usersPromise = $http('/url/to/our/users.json');
+var messagesPromise = $http('/url/to/messages');
+var commentsPromise = $http('/url/to/comments');
+
+$q.all(usersPromise, commentsPromise).then(function(users, comments){
+    // do something as soon as users and comments come back but not caring if messages came back yet.
+    return $http(a/new/http/request/using/user/id' + users[0].id)
+},function onFailure(reason1, reason2){
+    //handle failure
+})
+
+$q.all(usersPromise, messagesPromise, commentsPromise).then(function(users, messages, comments)){
+    // do something when all are ready
+});
+
+
+//this is what the above does using an ajax request and a callbacks (callback piramid of doom)
+makeAjaxRequest('/url/to/our/users.json',function(users){
+    $scope.users = users;
+    makeAjaxRequest('/url/to/messages', function(messages){
+        makeAjaxRequest('url/to/comments', function(comments){
+            //now we can actually do something with messages, users, and comments.
+        })
+    })
+});
+
+
+});

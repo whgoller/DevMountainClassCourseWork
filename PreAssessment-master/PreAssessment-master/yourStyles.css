@@ -1,0 +1,20 @@
+body {
+  background-color: #e3e3e3;
+}
+
+/* Green background*/
+.row-one{
+  background-color: #008000;
+  }
+/* Yellow background*/
+.row-two{
+  background-color: #FFFF00;
+  }
+ /* Red background*/
+.row-three{
+  background-color: #FF0000;
+  }
+/* Blue background*/
+.row-four{
+  background-color: #0000FF;
+  }

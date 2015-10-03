@@ -1,0 +1,21 @@
+firebase can be used as a rest client, but they recommend using the sdk instead. 
+
+firebase forge allows you to access the data
+
+security - 
+
+angular firebinding 
+
+bower is an automated script downloader. ***search for bowerjs to figure out how to use it.
+
+firebase gotcha's 
+1. it does not support arrays. there is a fake datatype that you use instead of using an array.
+
+
+
+
+
+moment.js // date library for javascript *** look into this 
+moment is on $window
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>NG</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller= "MainController">
+    <!-- double currly braces is a reference to the $scope object.-->
+    <div> 
+       <form ng-submit="addUser()">
+           <input type="text" placeholder="name" ng-model="newUser.name" required>
+           <input type="email" placeholder="email" ng-model="newUser.email" required>
+           <input type="password" placeholder="password" ng-model="newUser.password" required>
+           <button type="submit">Submit</button>
+       </form>
+    </div>
+    
+    <div ng-repeat="user in users">
+        <hr>
+        <li>{{user}}</li>
+        <li>{{user.name}}</li>
+        <li>{{user.email}}</li>
+        <li>{{user.name}} - {{user.email}}</li>
+        <button ng-click="deleteUser($index)">Delete User </button>
+    </div>
+    
+    
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular.min.js">
+    </script>
+<!--<script src="angular.min.js"></script>-->
+<script src="app.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>

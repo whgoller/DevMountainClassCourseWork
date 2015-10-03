@@ -1,0 +1,159 @@
+
+//Notes from amy
+get active on twitter
+create website
+
+in about section of the website... have proficient skills and learing skills
+post project completed...
+
+****can you javascript under pressure
+
+learn sass.
+
+
+// Notes from Ean
+JQuery 
+
+framework - tells us how to structure our app
+library...
+
+DOM (Document Object model) - when we write HTML, we are crating what will become the DOM
+	when our browsers download HTML from a server, they render it into the DOM
+
+JQuery  - what even is a jQuery?
+xbrowser polyfil
+DOM manipulator
+ajax handler
+Web app builder?
+
+
+
+xbrowser polyfil - jQuery's popularity was partly due to the fact that it made writing javascript easier to do over multiple bowsers.
+
+DOM manipulator - JQuery's primary use however is for basic DOM manipulations.
+
+How it works:
+Selectors
+Events 
+Methods
+
+Selectors
+$ is shorthand for 'jQuery'.
+When we use the $, we .....
+
+
+Events
+In Javascript we have something called 'chainging'. This means we can call multipel functions on something using the '.' or dot notation.
+Right here we are saying: "h.....
+
+Methods
+in jQuery we have a bunch of methods we can use to mainpulate things. all of these methods are called in a callback that runs once the even has been triggered.....
+
+
+Things that can be selected
+ID - '#nameOfId'
+Class - '.nameOfClass'
+Elements - 'nameOfElement' (like body or div)
+Multiple - ''
+
+
+List of popular events
+mouseenter - when mouse enters elements
+mouseleave - when mouse leaves element
+focus - when clicking into form field
+blur  - 
+click - 
+mousedown - when downclick on element
+mouseup - when upclick on element
+ready - when element is loaded
+hover - when mouse is hovering on element
+keystroke - when key is pressed and released
+keydown - when key is pressed
+keyup - when key is released
+scroll - when scrolling
+dblclick - on double click
+resize - wen element changes size
+
+List of popular methods
+toggleClass - 
+addClass - 
+removeClass - 
+toggleFade - fades element in and out
+fade - fades element
+animate - animates element
+hasClass - check of element has specific class
+prepend - add text to end of element
+append - add text to beginniig of element
+attr - find element's attributes
+css - change element's css
+text - add text to the DOM
+hide - hide element
+show - show element
+remove - 
+scrollTop - scroll to the top of the page
+html - insert html into
+
+
+
+AJAX (Asynchronous JavaScript and XML)
+	allows us to change data to and from our servers asynchronously
+
+CRUD - the basic building blocks of any web application!
+CREATE 
+READ 
+UPDATE 
+DESTROY
+
+
+Ajax 4 verbs for the basic building blocks.
+CREATE  - POST
+READ  - GET
+UPDATE - PUT
+DESTROY - DELETE
+
+
+API - Application programming interface
+Allows us to interface with someones's server / data!
+
+api in its purist form is just a URL
+
+//jquery has an ajax method that takes an object... 
+$.ajax({
+	url: 'http://www.google.com' //url has to be like that and it is a key...
+})
+
+
+a regular url will give compiled code...
+an api url will give you pure data...
+
+if you add .json at the end of an api url you will get the data.
+
+www.reddit.com/r/todayILearned.json //this will give redit api for the page
+
+examples: 
+$.ajax({
+	url: 'http://reddit.com/r/todayilearned.json',
+	method: 'GET' //this is a call to get the data if the call is success full the callback function would run.
+	success: function(data){ 
+		console.log(data);
+	}
+});
+
+
+
+$.ajax({
+	url: 'http://reddit.com/r/todayilearned.json',
+	method: 'POST'
+	data: {name:'ean'} 
+	success: function(data){ 
+		return data
+	}
+});
+
+
+can use Postman - REST Client in chrome web app tools 
+example
+https://api.github.com/users/whgoller
+
+
+reqr.es is a dummy database that you can use to practice ajax calls.

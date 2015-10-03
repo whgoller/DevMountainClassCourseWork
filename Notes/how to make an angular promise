@@ -1,0 +1,29 @@
+two different ways to call promises
+
+
+//the first is a simplified api
+function asyncGreet(name) {
+  // perform some asynchronous operation, resolve or reject the promise when appropriate.
+  var promise = $q(function(resolve, reject) {
+    setTimeout(function() {
+      if (okToGreet(name)) {
+        resolve('Hello, ' + name + '!');
+      } else {
+        reject('Greeting ' + name + ' is not allowed.');
+      }
+    }, 1000);
+  });
+  return promise;
+}
+
+
+//this is using a deffered object //this way give more granular control. this allow us control 
+//deffered is a private object and anyone using this will only get the public facing promise
+
+
+
+function asyncGreet(name) {
+
+
+
+}

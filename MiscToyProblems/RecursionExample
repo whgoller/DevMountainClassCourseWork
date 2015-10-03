@@ -1,0 +1,21 @@
+//recursion is kinda like a call back but it is calling itself instead of another function
+var YForX = function(theString){
+	if(str.length <=1){
+		if(str[0]=='x'){
+			return 'y';
+		}else {
+			return str;
+		}
+	}
+	if(str[0]==='x'){
+		return 'y' + YForX(str.slice(1));
+	}else {
+		return str[0] + YForX(str.slice(1));
+	}
+}
+YForX('xxgeenYyhSX');
+
+
+//if you are using a nested for loops then try to complete it using recursion
+
+

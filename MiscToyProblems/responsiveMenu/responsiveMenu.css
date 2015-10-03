@@ -1,0 +1,45 @@
+* {
+	outline: 1px solid red;
+}
+
+html, body {
+	width: 500px;
+	height: 500px;
+	margin: 0;
+	background: #f4f4f4;
+}
+
+.column1 {
+	width: 50%;
+	height: 94%;
+	margin: 5%;
+	float: left;
+}
+
+.column2 {
+	width: 30%;
+	height: 94%;
+	margin: 5%;
+	float: right;
+
+}
+
+.header {
+	background: #000;
+	color: #fff;
+	width: 100%;
+	height: 10%;
+	border: 1px solid #000;
+
+}
+
+.row {
+	width: 100%;
+	height: 13%;
+	background: #fff;
+	border: 1px solid #000;
+}
+
+.text {
+	
+}

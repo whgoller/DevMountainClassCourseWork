@@ -1,0 +1,71 @@
+* {
+	outline: 1px solid red;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: #0059a1;
+	font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+
+.header {	
+	width: 94%;
+	height: 90px;
+	/*max-height: */
+	color: #fff;
+	font-size: 11px;
+	line-height: 30px;
+	margin: 3%;
+	min-width: 350px;
+	word-wrap: break-word;
+	text-align: center;
+}
+
+/*.header span {
+	width: 100%;
+	height: 30px
+}*/
+
+.mediaIconLinks{
+	width: 16.5%;
+	height: 100%;
+	float: right;
+	max-height: 30px;
+}
+
+.mainContent {
+	width: 94%;
+	height: 84%;
+	background: #fff;
+	margin: 3%;
+}
+
+.menuContainer {
+	width: 
+}
+
+.navbarBtn {
+	background: #508e84;
+
+}
+
+.menuBar {
+
+}
+
+.menuItem {
+
+}
+
+
+
+
+
+
+.footer {
+	width: 100%;
+	height: 7%;
+}
